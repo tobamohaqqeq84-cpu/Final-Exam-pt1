@@ -23,5 +23,23 @@ int main(){
         cout << it->first << " " << it->second << endl;
     }
     cout << endl;
+
+    int maxCounts = 0;
+
+    for (auto it = traffic.begin(); it != traffic.end(); ++it){
+        if (it -> second > maxCounts){
+             maxCounts = it -> second;
+        }
+    }
+
+    cout << "Busiest airports with traffic count " << maxCounts << ":" <<endl;
+
+    for (auto it = traffic.begin(); it != traffic.end(); ++it){
+        if (it -> second == maxCounts){
+            cout << it -> first << " " << it -> second << endl;
+        }
+    }
+    cout << endl;
+
     return 0;
 }//milestone 1
