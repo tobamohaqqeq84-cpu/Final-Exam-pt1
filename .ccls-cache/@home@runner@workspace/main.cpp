@@ -1,6 +1,3 @@
-//Toba MOhaqqeq 
-//Final Exam pt-1
-//COMSC-210
 
 #include <iostream>
 #include <fstream>
@@ -12,9 +9,9 @@
 //Milestone 3.
 void printAirportsInRange(const map<string, int>& traffic, int low, int high){
     cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
-    for (auto it = traffic.begin(); it != traffic.end();++it){
+        for (auto it = traffic.begin(); it != traffic.end();++it){
         if(it ->second >= low && it-> second <= high){
-            cout << it ->first << " " << it->second << endl; 
+        cout << it ->first << " " << it->second << endl; 
         }
     }
     cout << endl;
@@ -28,10 +25,10 @@ int main(){
     ifstream infile("210-final-1-FA25.txt");
     if (!infile){
         cout << "Error opening file." << endl;
-        return 1;
+    return 1;
     }
     
-    string origin , destination;
+     string origin , destination;
     
     while(infile >> origin >> destination){
         traffic[origin] ++;
@@ -45,6 +42,7 @@ int main(){
     cout << endl;
     
     //Milestone 2.
+    
     int maxCounts = 0;
 
     for (auto it = traffic.begin(); it != traffic.end(); ++it){
@@ -53,7 +51,7 @@ int main(){
         }
     }
 
-    cout << "Busiest airport(s) with traffic count " << maxCounts << ":" <<endl;
+    cout << "Busiest airport(s) with traffic count " << maxCounts << ":" << endl;
 
     for (auto it = traffic.begin(); it != traffic.end(); ++it){
         if (it -> second == maxCounts){
@@ -68,3 +66,4 @@ int main(){
 
     return 0;
 }
+
