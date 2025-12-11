@@ -12,12 +12,14 @@ int main(){
         cout << "Error opening file." << endl;
         return 1;
     }
+    
     string origin , destination;
     
     while(infile >> origin >> destination){
         traffic[origin] ++;
         traffic[destination] ++;
     }
+    
     cout << "All airports and their traffic counts:" << endl;
     for (auto it = traffic.begin(); it != traffic.end();++it){
         cout << it->first << " " << it->second << endl;
@@ -39,7 +41,7 @@ int main(){
             cout << it -> first << " " << it -> second << endl;
         }
     }
-    cout << endl;// miles stonr 2 is compeleted 
+    cout << endl;
 
     return 0;
-}//milestone 2
+}
