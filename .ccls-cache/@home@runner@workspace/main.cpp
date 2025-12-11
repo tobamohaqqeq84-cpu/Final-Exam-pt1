@@ -5,6 +5,8 @@
  using namespace std;
 
 int main(){
+
+    
     map<string, int> traffic;
 
     ifstream infile("210-final-1-FA25.txt");
@@ -42,9 +44,17 @@ int main(){
         }
     }
     cout << endl;
+    printAirportsInRange(traffic, 5, 8);
+    printAirportsInRange(traffic, 9, 12);
 
     return 0;
 }
 void printAirportsInRange(const map<string, int>& traffic, int low, int high){
-    cout << "Airports with traffic in range [" << low << ", " < hig
+    cout << "Airports with traffic in range [" << low << ", " << high << "]" << endl;
+    for (auto it = traffic.begin(); it != traffic.end();++it){
+        if(it ->second >= low && it -> second <=high){
+            cout << it ->first << " " << it->second << endl; 
+        }
+    }
+    cout << endl;
 }
