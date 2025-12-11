@@ -1,3 +1,7 @@
+//Toba MOhaqqeq 
+//Final Exam pt-1
+//COMSC-210
+
 #include <iostream>
 #include <fstream>
 #include <string>
