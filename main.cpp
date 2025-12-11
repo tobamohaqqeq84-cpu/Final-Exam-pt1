@@ -45,3 +45,6 @@ int main(){
 
     return 0;
 }
+void printAirportsInRange(const map<string, int>& traffic, int low, int high){
+    cout << "Airports with traffic in range [" << low << ", " < hig
+}
