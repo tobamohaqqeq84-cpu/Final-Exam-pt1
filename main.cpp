@@ -39,7 +39,7 @@ int main(){
             cout << it -> first << " " << it -> second << endl;
         }
     }
-    cout << endl;
+    cout << endl;// miles stonr 2 is compeleted 
 
     return 0;
 }//milestone 2
